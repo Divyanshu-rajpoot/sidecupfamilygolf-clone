@@ -1,0 +1,427 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    color: #fff;
+    font-family: 'Montserrat';
+}
+
+body,
+html {
+    width: 100%;
+    height: 100%;
+}
+
+#nav {
+    height: 120px;
+    width: 100%;
+    /* background-color: red; */
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+    padding: 0px 110px;
+    position: fixed;
+    gap: 20px;
+    z-index: 99;
+}
+
+#nav img {
+    height: 70px;
+}
+
+#nav h4 {
+    text-transform: uppercase;
+    font-weight: 500;
+    font-size: 15px;
+}
+
+video {
+    height: 100%;
+    width: 100%;
+    object-fit: cover;
+    position: fixed;
+    z-index: -1;
+}
+
+#main {
+    position: relative;
+    background-color: rgba(0, 0, 0, 0.3);
+}
+
+#pageone {
+    height: 100vh;
+    width: 100%;
+    position: relative;
+    z-index: 10;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+}
+
+#pageone h1 {
+    font-size: 97px;
+    font-weight: 900;
+    position: relative;
+}
+
+#pageone h1::before {
+    content: "EAT. DRINK. PLAY.";
+    position: absolute;
+    color: #000;
+    top: -4px;
+    left: -4px;
+    -webkit-text-stroke: 1px #89d615;
+    z-index: -1;
+}
+
+#pageone h2 {
+    font-size: 22px;
+    font-weight: 800;
+
+}
+
+#pageone p {
+    font-size: 18px;
+    font-weight: 300;
+    width: 50%;
+}
+
+#pagetwo {
+    min-height: 100vh;
+    width: 100%;
+}
+
+#circle-value {
+    background-color: #89d615;
+    width: 20px;
+    height: 20px;
+    border-radius: 50%;
+    position: fixed;
+    z-index: 99;
+    transition: all 0.1s;
+}
+
+#circle-blur {
+    background-color: #89d615;
+    width: 240px;
+    height: 240px;
+    border-radius: 50%;
+    position: fixed;
+    filter: blur(100px);
+    z-index: 1;
+    transition: all 0.6s ease-out;
+}
+
+#scroller {
+    /* background: red ; */
+    white-space: nowrap;
+    overflow-x: auto;
+    overflow-y: hidden;
+    position: relative;
+    z-index: 10;
+}
+
+#scroller::-webkit-scrollbar {
+    display: none;
+}
+::-webkit-scrollbar{
+    width: 10px;
+    background-color: #000;
+}
+::-webkit-scrollbar-thumb{
+    background-color: #89d615;
+    border-radius: 7px;
+}
+#scroller-in {
+    display: inline-block;
+    white-space: nowrap;
+    animation-name: scroll;
+    animation-duration: 30s;
+    animation-timing-function: linear;
+    animation-iteration-count: infinite;
+
+}
+
+
+#scroller h4 {
+    display: inline-block;
+    font-size: 88px;
+    font-weight: 900;
+    margin-right: 10px;
+    transition: all linear 0.2s;
+    -webkit-text-stroke: 1px #89d615;
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    color: transparent;
+
+}
+
+#scroller h4:hover {
+    color: #89d615;
+}
+
+@keyframes scroll {
+    from {
+        transform: translateX(0);
+    }
+
+    to {
+        transform: translateX(-100%);
+    }
+
+}
+
+#about-us {
+    margin-top: 100px;
+    height: 45vh;
+    width: 100%;
+    /* background-color: red; */
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    padding: 0px 50px;
+    position: relative;
+    z-index: 10;
+}
+
+#about-us img {
+    height: 170px;
+    width: 170px;
+    border-radius: 15px;
+    object-fit: cover;
+}
+
+#about-us-info {
+    width: 50%;
+    text-align: center;
+}
+
+#about-us-info h4 {
+    font-size: 34px;
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    font-weight: 600;
+    margin-bottom: 30px;
+}
+
+#about-us-info p {
+    font-size: 18px;
+    line-height: 30px;
+}
+
+#cards-container {
+    height: 80vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    /* background-color: red; */
+    gap: 50px;
+    background-size: cover;
+    background-position: center;
+    position: relative;
+    z-index: 10;
+}
+
+.card {
+    height: 80%;
+    width: 24.5%;
+    border-radius: 15px;
+    /* background: blue; */
+    background-size: cover;
+    background-position: center;
+    overflow: hidden;
+    transition: all linear 1s;
+
+}
+
+#card1 {
+    background-image: url(https://eiwgew27fhz.exactdn.com/wp-content/uploads/2023/02/home-toptracer.jpg?strip=all&lossy=1&sharp=1&ssl=1);
+}
+#card2{
+    background-image: url(https://eiwgew27fhz.exactdn.com/wp-content/uploads/2023/02/hero-4.jpg?strip=all&lossy=1&sharp=1&ssl=1);
+}
+#card3{
+    background-image: url(https://eiwgew27fhz.exactdn.com/wp-content/uploads/2023/02/home-lessons.jpg?strip=all&lossy=1&sharp=1&ssl=1);
+}
+
+.overlay{
+    height: 100%;
+    width: 100%;
+    background-color: #89d615;
+    padding: 30px;
+    padding-top: 140px;
+    opacity: 0;
+    transition: all linear 0.8s;
+    
+}
+
+.overlay h4{
+    color: #000;
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    font-size: 26px;
+    font-weight: 600;
+    white-space: nowrap;
+    text-transform: uppercase;
+    margin-bottom: 20px;
+}
+.card p{
+    color: #000;
+    font-size: 15px;
+}
+
+.card:hover .overlay{
+    opacity: 1;
+}
+
+.card:hover{
+    transform: rotate3d(1,1,0,20deg);
+}
+
+#green-div{
+    height: 40vh;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    background: linear-gradient(to left bottom,#119f3a,#ACE022);
+}
+
+#green-div h4{
+    width:50%;
+    font-size: 24px;
+    text-align: center;
+    color: #000;
+    font-weight: 700;
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    line-height: 40px;
+    text-transform: uppercase;
+}
+#green-div img{
+    height: 100%;
+    object-fit: cover;
+    width: 15%;
+}
+
+#page3{
+
+    height: 100vh;
+    width: 100%;
+    background-color: #000;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+}
+
+#page3>p{
+    font-size: 22px;
+    width: 50%;
+    line-height: 30px;
+    font-family:sans-serif;
+    font-weight: 1000;
+    text-align: center;
+}
+
+#page3 img{
+    height: 37px;
+    position: absolute;
+}
+
+#page3 #colon1{
+    top: 25%;
+    left: 15%;
+}
+#page3 #colon2{
+    bottom: 30%;
+    right: 15%;
+}
+
+#page4{
+    height: 40vh;
+    width: 100%;
+    /* background-color: red; */
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 40px;
+    position: relative;
+}
+
+#elem{
+    height: 60%;
+    width: 27%;
+    overflow: hidden;
+    border-radius: 20px;
+    position: relative;
+}
+
+#elem h2{
+    height: 100%;
+    width: 100%;
+    background-color: #95c11e;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 28px;
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    font-weight: 900;
+    color: #000;
+    transition: all ease 0.5s;
+    position: absolute;
+    z-index: 10;
+}
+#elem img{
+    height: 100%;
+    width: 100%;
+    scale: 1.2;
+    transition: all ease 0.5s;
+    object-fit: cover;
+}
+
+#elem:hover h2{
+    color: #fff;
+    background-color: transparent;
+}
+#elem:hover img{
+    scale: 1;
+
+}
+#page4 h1{
+    font-size: 70px;
+    position: absolute;
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    font-weight: 900;
+    top: -1%;
+    color: #000;
+    -webkit-text-stroke: 1px #fff;
+}
+
+#footer{
+    height: 55vh;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    background: linear-gradient(to left bottom,#119f3a,#ACE022);
+}
+
+#footer-img{
+    height: 100%;
+    width: 20%;
+    overflow: hidden;
+    padding: 5px 0px;
+}
+#footer-img img{
+    height: 100%;
+    object-fit: cover;
+}
+#info h4{
+    width: 50;
+}
+
+#contact p{
+    width: 40%;
+    font-size: 17px;
+    color: #000;
+    font-weight: 900;
+    font-family: sans-serif;
+}
